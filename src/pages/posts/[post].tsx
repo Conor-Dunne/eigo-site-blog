@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import renderToString from "next-mdx-remote/render-to-string";
-import { MdxRemote } from "next-mdx-remote/types";
-import hydrate from "next-mdx-remote/hydrate";
+import renderToString from "next-mdx-remote";
+import { MDXRemote } from "next-mdx-remote";
+import hydrate from "next-mdx-remote";
 import matter from "gray-matter";
 import { fetchPostContent } from "../../lib/posts";
 import fs from "fs";
@@ -20,7 +20,7 @@ export type Props = {
   tags: string[];
   author: string;
   description?: string;
-  source: MdxRemote.Source;
+  source: MDXRemote.Source;
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };

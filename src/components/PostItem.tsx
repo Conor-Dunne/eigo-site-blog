@@ -8,8 +8,9 @@ type Props = {
 };
 export default function PostItem({ post }: Props) {
   return (
-    <Link legacyBehavior href={"/posts/" + post.slug}>
-        <Date date={parseISO(post.date)} />
+    <Link href={"/posts/" + post.slug}>
+      <>
+      <Date date={parseISO(post.date)} />
         <h2>{post.title}</h2>
         <style jsx>
           {`
@@ -23,6 +24,8 @@ export default function PostItem({ post }: Props) {
             }
           `}
         </style>
+
+      </>
     </Link>
   );
 }

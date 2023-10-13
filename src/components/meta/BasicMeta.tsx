@@ -33,7 +33,7 @@ export default function BasicMeta({
         }
       />
       {author ? <meta name="author" content={author} /> : null}
-      <link rel="canonical" href={config.base_url + url} />
+      <link  rel="canonical" href={config.base_url + url} />
     </Head>
   );
 }
